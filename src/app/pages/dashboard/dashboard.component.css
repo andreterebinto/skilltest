@@ -1,0 +1,63 @@
+.mTop{
+    margin-top: 20px;
+}
+
+body{
+    background: #f3f3f3 !important;
+    background-color:  #f3f3f3 !important;
+}
+
+.positionIcon{
+    width: 40px;
+    position: absolute;
+    right: 20px;
+}
+
+.cardBlue{
+    background: linear-gradient(87deg, #1446a7 0, #8b9bcc 100%) !important;
+    color: #fff;
+    border-radius: 10px !important;
+}
+.cardOrange{
+    
+    background: linear-gradient(87deg, #fbbc00 0, #bb9106 100%) !important;
+    color: #fff;
+    border-radius: 10px !important;
+}
+
+.cardRed{
+    background: linear-gradient(87deg, #b12d03 0, #521908 100%) !important;
+    color: #fff;
+    border-radius: 10px !important;
+}
+
+.cardGreen{
+    background: linear-gradient(87deg, #3b9c71 0, #024c2a 100%) !important;
+    color: #fff;
+    border-radius: 10px !important;
+}
+
+.card{
+    border-radius: 10px !important;
+}
+#map {
+    height: 300px;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  #chartdiv{
+    height: 300px;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  #chartdivWeek{
+    height: 300px;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  

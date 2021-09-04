@@ -1,0 +1,19 @@
+.posicaoImagem{
+    text-align: center;
+    margin: auto;
+    position: relative;
+    display: block;
+    border: 1px solid #264384;
+    border-radius: 8px;
+}
+
+.btn-info {
+    color: #fff !important;
+    background-color: #264384 !important;
+    border-color: #2b438e !important;
+}
+
+.text-info {
+    --bs-text-opacity: 1;
+    color: #264384 !important;
+}

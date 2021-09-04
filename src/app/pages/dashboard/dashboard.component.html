@@ -1,0 +1,107 @@
+<header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow" style="background: #223f9a !important;">
+    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">
+        <img class="posicaoImagem" src="/assets/img/logoAzul.jpg" style="width: 110px;">
+    </a>
+    <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-nav">
+        <div class="nav-item text-nowrap">
+        <a class="nav-link px-3" (click)="sair()">Sair</a>
+        </div>
+    </div>
+</header>
+  
+<div class="container-fluid">
+  <div class="row" style="background: #fbfbfb;padding: 10px;border-bottom: 1px solid #2b9eff;">
+    <div class="col-lg-2" style="padding-top: 6px;">
+      <h5 style="margin-top: 15px;">Dashboard Climático</h5>
+    </div>
+    <div class="col-lg-4">
+      <span style="font-weight:bold">Cidade</span>
+        <select (change)="changeCity()" style="width: 100%;appearance: auto !important;" class="form-control" [(ngModel)]="citySelected">
+            <option *ngFor="let city of cities">{{city.name}}</option>
+        </select>
+    </div>
+    <div class="col-lg-2" style="padding-top: 6px;">
+        <span style="font-weight:bold;width: 100%;float: left;">Temperatura atual: </span> <span style="color: #5d7abe;width: 100%;float: left;"> {{weather.temp}}</span>
+    </div>
+    <div class="col-lg-2" style="padding-top: 6px;">
+      <span style="font-weight:bold;width: 100%;float: left;">Velocidade do vento: </span> <span style="color: #5d7abe;width: 100%;float: left;"> {{wind.speed}}</span>
+    </div>
+    <div class="col-lg-2" style="padding-top: 6px;">
+      <span style="font-weight:bold;width: 100%;float: left;">Data: </span> <span style="color: #5d7abe;width: 100%;float: left;"> {{today}}</span>
+    </div>
+  </div>
+  <div class="row mTop">
+      <div class="col-lg-3">
+        <div class="card">
+            
+            <div class="card-body cardBlue">
+              <img src="/assets/img/humidity.png" class="positionIcon" alt="...">
+              <h5 class="card-title">Umidade</h5>
+              <p class="card-text">{{weather.humidity}}</p>
+            </div>
+          </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="card">
+            <div class="card-body cardOrange">
+              <img src="/assets/img/sensacao.png" class="positionIcon" alt="...">
+              <h5 class="card-title">Sensação Térmica</h5>
+              <p class="card-text">{{weather.feels_like}}</p>
+            </div>
+          </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="card">
+            <div class="card-body cardRed">
+              <img src="/assets/img/temperatures.png" class="positionIcon" alt="...">
+              <h5 class="card-title">Temperatura Máxima</h5>
+              <p class="card-text">{{weather.temp_max}}</p>
+            </div>
+          </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="card">
+            <div class="card-body cardGreen">
+              <img src="/assets/img/temperatures.png" class="positionIcon" alt="...">
+              <h5 class="card-title">Temperatura Mínima</h5>
+              <p class="card-text">{{weather.temp_min}}</p>
+            </div>
+          </div>
+      </div>
+  </div>
+  <div class="row mTop">
+       <div class="col-lg-6">
+        <div class="card">
+          <div class="card-body" style="padding: 0px;">
+            <div id="map"></div>
+          </div>
+        </div>
+        
+       </div>
+       <div class="col-lg-6">
+        <div class="card">
+          <div class="card-body" style="padding: 0px;">
+            <div id="chartdiv"></div>
+          </div>
+        </div>
+       </div>
+  </div>
+  <div class="row mTop">
+    <hr>
+  </div>
+  <div class="row">
+    <h5>Previsão para os próximos 7 dias</h5>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card">
+        <div class="card-body" style="padding: 0px;">
+          <div id="chartdivWeek"></div>
+        </div>
+      </div>
+     </div>
+  </div>
+</div>
